@@ -1,0 +1,13 @@
+name: BlockCracking
+version: 1
+main: me.imillusion.blockcracking.BlockCrack
+
+depends: [ProtocolLib]
+
+commands:
+  crackwand:
+    usage: /<command>
+    description: Gives a cracking wand
+  crackblock:
+    usage: /<command>
+    description: Gives a cracked block
