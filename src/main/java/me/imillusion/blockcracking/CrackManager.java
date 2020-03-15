@@ -77,6 +77,7 @@ public class CrackManager {
             getFromLocation(loc).setPower(0);
             update();
             cracks.remove(getFromLocation(loc));
+            return;
         } else if (getFromLocation(loc) != null) {
             Crack crack = getFromLocation(loc);
             cracks.remove(crack);

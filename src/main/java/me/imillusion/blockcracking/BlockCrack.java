@@ -6,6 +6,7 @@ import me.imillusion.blockcracking.commands.GiveCrackWand;
 import me.imillusion.blockcracking.data.Crack;
 import me.imillusion.blockcracking.files.FileManager;
 import me.imillusion.blockcracking.listeners.CrackBlockWand;
+import me.imillusion.blockcracking.listeners.CrackedBlockBreak;
 import me.imillusion.blockcracking.listeners.CrackedBlockPlace;
 import me.imillusion.blockcracking.listeners.WorldMoveListener;
 import org.bukkit.Bukkit;
@@ -29,6 +30,7 @@ public class BlockCrack extends JavaPlugin {
         Bukkit.getPluginManager().registerEvents(new CrackBlockWand(manager), this);
         Bukkit.getPluginManager().registerEvents(new CrackedBlockPlace(manager), this);
         Bukkit.getPluginManager().registerEvents(new WorldMoveListener(manager), this);
+        Bukkit.getPluginManager().registerEvents(new CrackedBlockBreak(manager), this);
 
         getCommand("crackwand").setExecutor(new GiveCrackWand(manager));
         getCommand("crackblock").setExecutor(new CrackBlock());
